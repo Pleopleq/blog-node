@@ -4,7 +4,7 @@ const app = express();
 const path = require('path');
 
 const makePath = (dir, filename) => {
-    return path.resolve(__dirname, "..", "public", dir, filename);
+    return path.resolve(__dirname, "..", "", dir, filename);
 };
 
 const todos = ['learn scrum', 'learn react', 'lift heavy'];
@@ -15,7 +15,7 @@ app.use(express.static(path.resolve(__dirname, "..", "public")));
 
 
 app.get('/index', (req ,res) => {
-    res.render(makePath("public", "index.ejs"));
+    res.render(makePath("public", "index.ejs"), {todos});
 })
 
 

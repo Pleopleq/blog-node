@@ -1,9 +1,11 @@
+
 const todoForm = document.querySelector('.todoForm');
 const todoInput = document.querySelector('.todoInput');
 const todoList = document.querySelector('.todosList');  
 
-
 todoForm.addEventListener("submit", e =>{
+    
+
     e.preventDefault();
     fetch("http://localhost:3000/todo", {
         method: "POST",
