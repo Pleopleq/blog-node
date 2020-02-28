@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Open sidebar</li>
+            <li>Change theme</li>
+        </ul>
+    </nav>
+    <h1>Todos</h1>
+    <form class="todoForm">
+    <input type="text" name="search" class="todoInput">
+    </form>
+    
+    <ul class="todosList">
+        <% todos.forEach( function (todo) { %>
+            <li><%= todo %></li>
+            <% }); %>
+    </ul>
+
+</body>
+<script src="/public/test.js"></script>
+</html>
+
